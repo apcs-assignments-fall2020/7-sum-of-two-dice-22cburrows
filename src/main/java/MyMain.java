@@ -33,14 +33,15 @@ public class MyMain {
         System.out.println("How many pair of dice would you like to roll?");
         int dice = scan.nextInt();
 
-        int[] array = new int[11];
-        array = (sumOfTwoDice(dice
-
-        ;))}
-
-                 for (int i = 0; i < 11; i++){
-            double percent = array[i]/dice;
-            System.out.println("% of rolls where sum == " + (i + 3) + ": " +  percent);
+        int[] array = (sumOfTwoDice(dice));
+        array = (sumOfTwoDice(dice));
+        
+        for (int i = 0; i < 11; i++){
+            System.out.println(array[i]);
+            System.out.println(dice);
+            double percent = (double) (array[i]/dice)*100;
+            System.out.println(percent);
+            System.out.println("% of rolls where sum == " + (i + 2) + ": " +  percent);
         }
     }
 }
