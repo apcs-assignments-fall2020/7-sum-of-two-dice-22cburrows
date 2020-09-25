@@ -18,9 +18,9 @@ public class MyMain {
         for (int i = 0; i < n; i++){
             totals[i] = rollDie() + rollDie();
         }
-        for (int i = 2; i < (totals.length + 2); i++){
-            if ()
-            for (int i2 = 0; )
+        for (int i = 0; i < totals.length; i++){
+            int assign = totals[i]-2;
+            sums[assign] = sums[assign] + 1;
 
         }
         return sums;
@@ -28,6 +28,16 @@ public class MyMain {
 
 
     public static void main(String[] args) {
-        // YOUR CODE HERE
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("How many pair of dice would you like to roll?");
+        int dice = scan.nextInt();
+
+        int[] array = sumwoDice(dice);
+
+        for (int i = 0; i < 11; i++){
+            double percent = array[i]/dice;
+            System.out.println("% of rolls where sum == " + (i + 3) + ": " +  percent);
     }
 }
+
