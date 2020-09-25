@@ -32,15 +32,13 @@ public class MyMain {
 
         System.out.println("How many pair of dice would you like to roll?");
         int dice = scan.nextInt();
+        double dice2 = (double) dice;
 
         int[] array = (sumOfTwoDice(dice));
         array = (sumOfTwoDice(dice));
         
         for (int i = 0; i < 11; i++){
-            System.out.println(array[i]);
-            System.out.println(dice);
-            double percent = (double) (array[i]/dice)*100;
-            System.out.println(percent);
+            double percent = (double) (array[i]/dice2)*100;
             System.out.println("% of rolls where sum == " + (i + 2) + ": " +  percent);
         }
     }
